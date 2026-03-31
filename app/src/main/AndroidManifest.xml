@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <application
+        android:name=".apps.LTVApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="IBO QUANTIC"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.IptvPlayer"
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true">
+
+        <activity android:name=".MainActivity" android:exported="true"
+            android:screenOrientation="portrait" android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.HomeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.LiveActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".activities.LiveChannelActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".activities.MovieActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".activities.MovieInfoActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".activities.MoviePlayerActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".activities.SeriesActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".activities.SeriesInfoActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".activities.SeriesPlayerActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".activities.SeasonActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".activities.SearchActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.CatchUpActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".activities.CatchUpPlayerActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".activities.SettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.ChangePlaylistActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

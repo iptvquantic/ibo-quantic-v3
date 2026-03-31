@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- IBO QUANTIC Brand - Green Neon / Circuit -->
+    <color name="brand_primary">#00FF41</color>
+    <color name="brand_primary_dark">#00CC33</color>
+    <color name="brand_secondary">#00E676</color>
+    <color name="brand_accent">#39FF14</color>
+    <color name="brand_glow">#80FF41</color>
+    <!-- Backgrounds -->
+    <color name="bg_dark">#050505</color>
+    <color name="bg_card">#0A0F0A</color>
+    <color name="bg_card2">#0D130D</color>
+    <color name="bg_surface">#111811</color>
+    <color name="bg_overlay">#CC000000</color>
+    <!-- Text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#A0C8A0</color>
+    <color name="text_hint">#406040</color>
+    <color name="text_on_primary">#000000</color>
+    <!-- Status -->
+    <color name="color_live">#FF1744</color>
+    <color name="color_success">#00FF41</color>
+    <color name="color_warning">#FFD600</color>
+    <color name="color_error">#FF5252</color>
+    <!-- Category -->
+    <color name="cat_selected_bg">#00FF41</color>
+    <color name="cat_unselected_bg">#0D130D</color>
+    <!-- Buttons -->
+    <color name="btn_play">#00FF41</color>
+    <color name="btn_play_dark">#00CC33</color>
+    <color name="btn_info">#00B8D4</color>
+    <color name="btn_delete">#FF5252</color>
+    <!-- Divider -->
+    <color name="divider">#1A2E1A</color>
+    <!-- System -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

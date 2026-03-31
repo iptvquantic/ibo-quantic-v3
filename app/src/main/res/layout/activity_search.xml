@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="64dp"
+        android:gravity="center_vertical" android:background="@color/bg_surface"
+        android:paddingStart="16dp" android:paddingEnd="16dp">
+        <ImageView android:id="@+id/ivBack"
+            android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_back" android:padding="8dp" android:layout_marginEnd="12dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="PESQUISA" android:textColor="@color/brand_primary"
+            android:textSize="16sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/bg_card" android:padding="12dp">
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Digite o canal, filme ou serie..."
+            android:background="@drawable/search_box_big"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:paddingStart="20dp" android:paddingEnd="20dp"
+            android:textSize="15sp" android:inputType="text"
+            android:imeOptions="actionSearch" android:singleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="36dp"
+        android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp">
+        <TextView android:id="@+id/tvResultCount"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="@color/text_secondary" android:textSize="12sp"
+            android:text="Digite para pesquisar"/>
+        <ProgressBar android:id="@+id/progressBar"
+            android:layout_width="20dp" android:layout_height="20dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/llEmpty"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:gravity="center" android:orientation="vertical" android:visibility="visible">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Canais, filmes e series em um so lugar"
+            android:textColor="@color/text_secondary" android:textSize="14sp"
+            android:gravity="center" android:padding="32dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvResults"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:visibility="gone"/>
+</LinearLayout>

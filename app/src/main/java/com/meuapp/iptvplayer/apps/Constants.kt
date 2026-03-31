@@ -1,0 +1,25 @@
+package com.meuapp.iptvplayer.apps
+
+object Constants {
+    const val APP_NAME = "IBO QUANTIC"
+    const val PREF_NAME = "iboquantic_prefs"
+    const val KEY_SERVER_URL = "server_url"
+    const val KEY_USERNAME = "username"
+    const val KEY_PASSWORD = "password"
+    const val KEY_PLAYLIST_NAME = "playlist_name"
+    const val EXTRA_CATEGORY_ID = "category_id"
+    const val EXTRA_CATEGORY_NAME = "category_name"
+    const val EXTRA_STREAM_ID = "stream_id"
+    const val EXTRA_STREAM_URL = "stream_url"
+    const val EXTRA_STREAM_NAME = "stream_name"
+    const val EXTRA_STREAM_ICON = "stream_icon"
+    const val EXTRA_SERIES_ID = "series_id"
+    const val EXTRA_SEASON_NUM = "season_num"
+    const val EXTRA_EPISODE = "episode"
+    const val EXTRA_VOD_ID = "vod_id"
+    const val EXTRA_MOVIE_URL = "movie_url"
+    const val TYPE_LIVE = "live"
+    const val TYPE_VOD = "movie"
+    const val TYPE_SERIES = "series"
+    const val PLAYER_API = "/player_api.php"
+}

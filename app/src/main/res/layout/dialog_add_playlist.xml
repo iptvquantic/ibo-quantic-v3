@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="20dp" android:background="@color/bg_card">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Nome da lista" android:textColor="@color/text_secondary"
+        android:textSize="12sp" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/etName" android:layout_width="match_parent" android:layout_height="48dp"
+        android:hint="Ex: Minha IPTV" android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint" android:background="@drawable/input_bg"
+        android:padding="12dp" android:textSize="14sp" android:layout_marginBottom="14dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="URL do servidor" android:textColor="@color/text_secondary"
+        android:textSize="12sp" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/etUrl" android:layout_width="match_parent" android:layout_height="48dp"
+        android:hint="http://servidor.com:8080" android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint" android:background="@drawable/input_bg"
+        android:padding="12dp" android:inputType="textUri" android:textSize="14sp"
+        android:layout_marginBottom="14dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Usuário" android:textColor="@color/text_secondary"
+        android:textSize="12sp" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/etUser" android:layout_width="match_parent" android:layout_height="48dp"
+        android:hint="usuario" android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint" android:background="@drawable/input_bg"
+        android:padding="12dp" android:textSize="14sp" android:layout_marginBottom="14dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Senha" android:textColor="@color/text_secondary"
+        android:textSize="12sp" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/etPass" android:layout_width="match_parent" android:layout_height="48dp"
+        android:hint="senha" android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint" android:background="@drawable/input_bg"
+        android:padding="12dp" android:inputType="textPassword" android:textSize="14sp"/>
+</LinearLayout>

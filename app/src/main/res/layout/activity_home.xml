@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Header with logo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/logo_ibo_quantic"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="14dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IBO QUANTIC"
+                android:textColor="@color/brand_primary"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"/>
+            <TextView
+                android:id="@+id/tvPlaylistName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Minha Lista"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Live indicator dot -->
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <View android:layout_width="10dp" android:layout_height="10dp"
+                android:background="@color/brand_primary"
+                android:layout_marginEnd="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ONLINE" android:textColor="@color/brand_primary"
+                android:textSize="11sp" android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Separator -->
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="@color/divider" android:layout_marginBottom="20dp"/>
+
+    <!-- Menu grid 2x3 -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="2"
+        android:rowCount="3">
+
+        <!-- AO VIVO - Red -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardLive"
+            android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_rowWeight="1" android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#1A0005"
+            app:cardCornerRadius="18dp" app:cardElevation="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📡" android:textSize="42sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="AO VIVO" android:textColor="#FF4444"
+                    android:textSize="17sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:gravity="center_vertical" android:layout_marginTop="4dp">
+                    <View android:layout_width="8dp" android:layout_height="8dp"
+                        android:background="#FF4444" android:layout_marginEnd="5dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Transmissão em tempo real"
+                        android:textColor="#80FFFFFF" android:textSize="10sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- FILMES - Green primary -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMovies"
+            android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_rowWeight="1" android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#001A05"
+            app:cardCornerRadius="18dp" app:cardElevation="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🎬" android:textSize="42sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="FILMES" android:textColor="@color/brand_primary"
+                    android:textSize="17sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="VOD sob demanda"
+                    android:textColor="#80FFFFFF" android:textSize="10sp" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- SÉRIES - Purple/neon -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSeries"
+            android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_rowWeight="1" android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#0A0020"
+            app:cardCornerRadius="18dp" app:cardElevation="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🎭" android:textSize="42sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="SÉRIES" android:textColor="#BB86FC"
+                    android:textSize="17sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Temporadas e episódios"
+                    android:textColor="#80FFFFFF" android:textSize="10sp" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- PESQUISAR - Cyan -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSearch"
+            android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_rowWeight="1" android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#00151A"
+            app:cardCornerRadius="18dp" app:cardElevation="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🔍" android:textSize="42sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="PESQUISAR" android:textColor="#00E5FF"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Busca inteligente"
+                    android:textColor="#80FFFFFF" android:textSize="10sp" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- LISTAS - Blue -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardChangelist"
+            android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_rowWeight="1" android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#00071A"
+            app:cardCornerRadius="18dp" app:cardElevation="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📋" android:textSize="42sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="LISTAS" android:textColor="#448AFF"
+                    android:textSize="17sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Gerenciar playlists"
+                    android:textColor="#80FFFFFF" android:textSize="10sp" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CONFIGURAÇÕES - Gray -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSettings"
+            android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_rowWeight="1" android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#101010"
+            app:cardCornerRadius="18dp" app:cardElevation="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="⚙️" android:textSize="42sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="CONFIG." android:textColor="#90A4AE"
+                    android:textSize="17sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Conta e preferências"
+                    android:textColor="#80FFFFFF" android:textSize="10sp" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+</LinearLayout>

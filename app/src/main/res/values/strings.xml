@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IBO QUANTIC</string>
+    <string name="hint_server_url">URL do servidor (ex: http://servidor.com:8080)</string>
+    <string name="hint_username">Usuário</string>
+    <string name="hint_password">Senha</string>
+    <string name="hint_playlist_name">Nome da lista (opcional)</string>
+    <string name="btn_connect">Conectar</string>
+    <string name="label_live">Ao Vivo</string>
+    <string name="label_movies">Filmes</string>
+    <string name="label_series">Séries</string>
+    <string name="label_search">Pesquisar</string>
+    <string name="label_settings">Configurações</string>
+    <string name="label_changelist">Minhas Listas</string>
+    <string name="hint_search">🔍 Digite o nome do canal, filme ou série...</string>
+    <string name="btn_play">▶ Assistir</string>
+    <string name="btn_add_playlist">+ Adicionar Lista</string>
+    <string name="no_results">Nenhum resultado encontrado</string>
+    <string name="loading">Carregando...</string>
+</resources>
