@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             when (result.status) {
                 "active" -> {
                     PreferenceHelper.saveAuthData(
-                        context = this@MainActivity,
+                        ctx = this@MainActivity,
                         mac = macAddress,
                         dns = result.dns ?: "",
                         username = result.username ?: "",
