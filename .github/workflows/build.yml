@@ -19,24 +19,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Fix Gradle wrapper
-        run: |
-          mkdir -p gradle/wrapper
-          cat > gradle/wrapper/gradle-wrapper.properties << 'EOF'
-distributionBase=GRADLE_USER_HOME
-distributionPath=wrapper/dists
-distributionUrl=https\://services.gradle.org/distributions/gradle-8.4-bin.zip
-networkTimeout=10000
-validateDistributionUrl=true
-zipStoreBase=GRADLE_USER_HOME
-zipStorePath=wrapper/dists
-EOF
-          curl -fsSL "https://github.com/gradle/gradle/raw/v8.4.0/gradle/wrapper/gradle-wrapper.jar" \
-            -o gradle/wrapper/gradle-wrapper.jar
-          chmod +x gradlew
-          echo "WRAPPER OK:"
-          ls -la gradle/wrapper/
-
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
@@ -46,14 +28,32 @@ EOF
       - name: Install SDK
         run: sdkmanager "platforms;android-34" "build-tools;34.0.0"
 
-      - name: Build APK
-        run: ./gradlew assembleDebug --no-daemon --stacktrace
-        env:
-          ANDROID_HOME: /usr/local/lib/android/sdk
+      - name: Download Gradle wrapper
+        run: |
+          mkdir -p gradle/wrapper
+          curl -fL https://github.com/gradle/gradle/raw/v8.4.0/gradle/wrapper/gradle-wrapper.jar -o gradle/wrapper/gradle-wrapper.jar
 
-      - name: Upload APK
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
+      - name: Build APK
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Rename APK
+        run: cp app/build/outputs/apk/debug/app-debug.apk IBO_QUANTIC.apk
+
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: IBO_QUANTIC_APK
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: IBO_QUANTIC.apk
           retention-days: 30
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v1.0
+          name: IBO QUANTIC v1.0
+          files: IBO_QUANTIC.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
